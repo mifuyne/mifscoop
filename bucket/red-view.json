@@ -7,7 +7,7 @@
         "url": "https://github.com/red/red#license"
     },
     "url": "https://static.red-lang.org/dl/auto/win/red-view-13jul23-aea09888d.exe#/red-view.exe",
-    "hash": "cc00efc1f74d53a4a98e7ea2508f5cf7b789644fae42a56f56b5459e2c4789bf",
+    "hash": "3bd84179574237db70642b3bfbbb91a4e6e98bfa34620257203a313854d8dfaf",
     "bin": "red-view.exe",
     "checkver": {
         "url": "https://static.red-lang.org/dl/auto/win/history.html",
