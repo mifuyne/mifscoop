@@ -7,7 +7,7 @@
         "url": "https://github.com/red/red#license"
     },
     "url": "https://static.red-lang.org/dl/auto/win/red-view-24jul23-af3d35a2f.exe#/red-view.exe",
-    "hash": "f9e863363532676bc783741f46d624a6668b096450f3d7742c1eca5280b10c02",
+    "hash": "35964b0849723f35e8753ddaae80a57e36975fdb0c1375078abe6076b528fa19",
     "bin": "red-view.exe",
     "checkver": {
         "url": "https://static.red-lang.org/dl/auto/win/history.html",
@@ -20,10 +20,6 @@
         ]
     ],
     "autoupdate": {
-        "url": "https://static.red-lang.org/dl/auto/win/red-view-$version-$matchCommit.exe#/red-view.exe",
-        "hash": {
-            "url": "http://static.red-lang.org/download.html",
-            "regex": "$basename[\\s\\S]+?$sha256:\\s([a-fA-F0-9]{32,128})"
-        }
+        "url": "https://static.red-lang.org/dl/auto/win/red-view-$version-$matchCommit.exe#/red-view.exe"
     }
 }
