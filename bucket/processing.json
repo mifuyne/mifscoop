@@ -1,0 +1,38 @@
+{
+    "version": "4.2",
+    "description": "Processing is a flexible software sketchbook and a language for learning how to code.",
+    "homepage": "https://processing.org/",
+    "license": "GPL-2.0,LGPL-2.1",
+    "notes": "Java is included with the Processing releases.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/processing/processing4/releases/download/processing-1292-4.2/processing-4.2-windows-x64.zip",
+            "hash": "ca1fdd74930451db505687cc02db18dacb59e81a5575803b49debfced9e8305e",
+            "extract_dir": "processing-4.2"
+        }
+    },
+    "bin": [
+        [
+            "processing-java.exe",
+            "processing-cli"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "processing.exe",
+            "Processing"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/processing/processing4",
+        "regex": "/releases/tag/processing-(?<rev>[\\d]+)-(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/processing/processing4/releases/download/processing-$matchRev-$version/processing-$version-windows-x64.zip",
+                "extract_dir": "processing-$version"
+            }
+        }
+    }
+}
