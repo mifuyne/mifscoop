@@ -10,18 +10,6 @@
             "hash": "aed1995bd849f6eb1f74a32fec3f4a4edcd2b3859dd70ad3d565e9d02aede67e"
         }
     },
-    "bin": [
-        "openmw.exe",
-        "openmw-launcher.exe",
-        [
-            "openmw.exe",
-            "openmw-nightly"
-        ],
-        [
-            "openmw-launcher.exe",
-            "openmw-launcher-nightly"
-        ]
-    ],
     "shortcuts": [
         [
             "openmw.exe",
