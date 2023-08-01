@@ -1,0 +1,49 @@
+{
+    "version": "23.6.0.0",
+    "description": "A video player forked from MPV. It can also play Youtube videos, search and download subtitles, and includes other features like a thumbnail generator and audio and video filters.",
+    "homepage": "https://www.smplayer.info/",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/smplayer-dev/smplayer/releases/download/v23.6.0/smplayer-portable-23.6.0.0-x64.7z",
+            "hash": "32c02daab027bd154cb29e5818e9ef5d6645b1a23d1cf56a1abe4bcbb2f4f163"
+        },
+        "32bit": {
+            "url": "https://github.com/smplayer-dev/smplayer/releases/download/v23.6.0/smplayer-portable-23.6.0.0-win32-qt5.6.7z",
+            "hash": "a54b7d6dba5df9c54236861aa6c010812825e84723e6dc1724a541e679608359"
+        }
+    },
+    "extract_dir": "smplayer-portable",
+    "pre_uninstall": [
+        "# The following must be done as SMPlayer deletes the original file which was linked to the persist folder when it saves settings, rather than editing the file.",
+        "Copy-Item \"$dir\\smplayer.ini\" \"$persist_dir\\smplayer.ini\""
+    ],
+    "shortcuts": [
+        [
+            "smplayer.exe",
+            "SMPlayer"
+        ]
+    ],
+    "persist": [
+        "screenshots",
+        "hdpi.ini",
+        "playlist.ini",
+        "favorites.m3u8",
+        "radio.m3u8",
+        "tv.m3u8"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/smplayer-dev/smplayer/releases/latest",
+        "regex": "smplayer-portable-([\\d.]+)-win32-qt(?<qtversion>[\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/smplayer-dev/smplayer/releases/download/v23.6.0/smplayer-portable-$version-x64.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/smplayer-dev/smplayer/releases/download/v23.6.0/smplayer-portable-$version-win32-qt$matchQtversion.7z"
+            }
+        }
+    }
+}
