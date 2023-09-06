@@ -19,11 +19,11 @@
         "Remove-Item \"$dir\\Godot_*_console.*\"",
         "Get-Item \"$dir\\Godot_*.exe\" | Rename-Item -NewName 'godot-mono.exe'"
     ],
-    "bin": "godot-mono.exe",
+    "bin": ["godot-mono.exe", "godot3-mono"],
     "shortcuts": [
         [
             "godot-mono.exe",
-            "Godot Engine (Mono)"
+            "Godot Engine 3 LTS (Mono)"
         ]
     ],
     "checkver": {
