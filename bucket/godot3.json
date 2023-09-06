@@ -17,7 +17,7 @@
         "Remove-Item \"$dir\\Godot_*_console.*\"",
         "Get-Item \"$dir\\Godot_*.exe\" | Rename-Item -NewName 'godot.exe'"
     ],
-    "bin": ["godot.exe", "godot3"],
+    "bin": [["godot.exe", "godot3"]],
     "shortcuts": [
         [
             "godot.exe",
