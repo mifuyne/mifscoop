@@ -7,7 +7,6 @@
         "url": "https://github.com/red/red#license"
     },
     "url": "https://static.red-lang.org/dl/auto/win/red-toolchain-23sep23-f0c5dc1dc.exe#/red-toolchain.exe",
-    "hash": "920836724141714a2ca80f3acac5dcac3af5d5b50677d4f21c5ba9c4d6525a86",
     "bin": "red-toolchain.exe",
     "checkver": {
         "url": "https://static.red-lang.org/dl/auto/win/history.html",
