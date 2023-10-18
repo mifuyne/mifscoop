@@ -18,6 +18,7 @@
         "# The following must be done as SMPlayer deletes the original file which was linked to the persist folder when it saves settings, rather than editing the file.",
         "Copy-Item \"$dir\\smplayer.ini\" \"$persist_dir\\smplayer.ini\""
     ],
+    "bin": "smplayer.exe",
     "shortcuts": [
         [
             "smplayer.exe",
