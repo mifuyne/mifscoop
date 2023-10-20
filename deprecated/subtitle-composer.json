@@ -1,0 +1,56 @@
+{
+    "##": "the actual program doesn't work at the moment?",
+    "version": "",
+    "description": "An open source text-based subtitle editor that supports basic and advanced editing operations.",
+    "homepage": "https://subtitlecomposer.kde.org/",
+    "license": "GPL-2.0-or-later",
+    "notes": "",
+    "architecture": {
+        "url": "",
+        "hash": ""
+    },
+    "pre_install": "",
+    "installer": {
+        "script": ""
+    },
+    "post_install": [
+        "",
+        ""
+    ],
+    "uninstaller": {
+        "script": ""
+    },
+    "bin": "",
+    "env_add_path": [
+        "",
+        ""
+    ],
+    "shortcuts": [
+        [
+            "bin\\subtitlecomposer.exe",
+            "Subtitle Composer"
+        ]
+    ],
+    "persist": [
+        "",
+        ""
+    ],
+    "checkver": {
+        "url": "https://gitlab.com/api/v4/projects/30581343/pipelines/",
+        "script": [
+            "$sc_recent_pipeline = ((Invoke-WebRequest -Uri 'https://gitlab.com/api/v4/projects/30581343/pipelines/').Content | ConvertFrom-Json | Where-Object ref -eq 'obs/latest')[0].id",
+            "$sc_pipeline_jobs_url = 'https://gitlab.com/api/v4/projects/30581343/pipelines/' + $sc_recent_pipeline + '/jobs/'",
+            "$sc_jobs = ((Invoke-WebRequest -Uri $sc_pipeline_jobs_url))",
+            "$sc_winjob = ($sc_jobs | ConvertFrom-Json |  Where-Object status -eq 'success' | Where-Object ref -eq 'obs/latest')",
+            "$sc_job_date = $sc_winjob.finished_at",
+            "$sc_job_commit = $sc_winjob.commit.short_id",
+            "$sc_winjob_id = $sc_winjob.id",
+            "Write-Output (Get-Date $sc_job_date -Format 'yyyyMMdd') $sc_job_commit $sc_winjob_id"
+        ],
+        "regex": "(?<date>.+?)\\s(?<commit>.+?)\\s(?<job>.+)",
+        "replace": "${date}-${commit}"
+    },
+    "autoupdate": {
+        "url": "https://gitlab.com/api/v4/projects/30581343/jobs/$matchJob/artifacts/SubtitleComposerSetup.exe"
+    }
+}
