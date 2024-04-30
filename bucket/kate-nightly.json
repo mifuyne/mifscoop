@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.kde.org/ci-builds/utilities/kate/master/windows/kate-master-7125-windows-cl-msvc2022-x86_64.7z",
-            "hash": "cba505a39a5f35af95e1bfe0e567753c519ff8166ba3dc3e781fd7261c448fe0"
+            "hash": "2fc375712323952fc41cde14b317d512667a302d0a069a31ea06f37ffe78550c"
         }
     },
     "bin": [
