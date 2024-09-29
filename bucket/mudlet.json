@@ -20,13 +20,13 @@
     ],
     "checkver": {
         "url": "https://www.mudlet.org/download/",
-        "regex": "Mudlet (?<version>[\\d.]+) \\([Ww]indows-32\\)"
+        "regex": "Mudlet (?<version>[\\d.]+) \\(windows-32\\)"
     },
     "autoupdate": {
-        "url": "https://www.mudlet.org/wp-content/files/Mudlet-$matchVersion-windows-installer.exe#/dl.7z",
+        "url": "https://www.mudlet.org/wp-content/files/Mudlet-$matchVersion-windows-32-installer.exe#/dl.7z",
         "hash": {
             "url": "https://www.mudlet.org/download/",
-            "regex": "[Ww]indows-32\\s.*?MiB[\\w\\W]+?\">$sha256"
+            "regex": "windows-32\\s.*?MiB[\\w\\W]+?\">$sha256"
         }
     }
 }
