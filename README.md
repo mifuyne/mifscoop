@@ -1,3 +1,9 @@
+I have not used Windows since Feb 2025, thus I no longer have a need for scoop.sh. Thanks for being there when I was on Windows though! And good luck to everyone else that's still stuck on Windows `o7`
+
+This repo is now archived.
+
+---
+
 # Mifuyne's Scoop Bucket
 
 <!-- Uncomment the following line after replacing placeholders -->
